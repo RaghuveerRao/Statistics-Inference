@@ -7,8 +7,8 @@ library(readxl)
 library(ggplot2)
 ```
 
-Estimation - Week 3
--------------------
+Estimation
+----------
 
 ### Confidence Interval for true mean
 
@@ -161,9 +161,11 @@ Hypothesis Testing
 ### Errors
 
 Accepting null hypothesis when alternative hypothesis is true -&gt; Type 1
+
 Accepting alternative hypothesis when null hypothesis is ture -&gt; Type 2
 
 The probability of makring Type 1 error is Alpha (accepting Ha)
+
 The probability of makring Type 2 error is Beta (accepting Ho)
 
 The closer is true mean to the hopothetical mean, the higher the value of Beta. We can only control Type 1 error through desired level of significance. Hence, design hypothesis such that the error we want to control is the Type 1 error. \*\* Statisticians Dodge: \*\* Since we cannot control Type 2 error. (ie. Accepting Ho when Ha is ture). Never draw the conclusion of accepting Ho, istead what we can conclude is that: 'we do not reject Ho) ie: Failed to reject the Null Hypothesis P value is the probablity of getting the sample result if Ho were true
@@ -256,6 +258,7 @@ qqline(seq, col = "blue")
 #### Using Shapiro Wilk test
 
 Null hypothesis -&gt; distribution is normal
+
 Alt. hypothesis -&gt; distribution is not normal
 
 ``` r
@@ -266,7 +269,7 @@ shapiro.test(seq)
     ##  Shapiro-Wilk normality test
     ## 
     ## data:  seq
-    ## W = 0.97852, p-value = 0.4912
+    ## W = 0.98488, p-value = 0.7665
 
 P-value being so high, we can conclude that: We fail to reject null hypothesis.
 Hence, our assumption of distribution being normal is not rejected.
@@ -303,6 +306,7 @@ qchisq(0.9746527,1)
 Chi-Square goodness of fit test is a non-parametric test that is used to find out how the observed value of a given phenomena is significantly different from the expected value. In Chi-Square goodness of fit test, the term goodness of fit is used to compare the observed sample distribution with the expected probability distribution.
 
 Null hypothesis -&gt; There is no significant difference between the observed and the expected value.
+
 Alt. hypothesis -&gt; There is a significant difference between atleast one of them
 
 **Assumptions:**
@@ -378,6 +382,7 @@ Relationships
 -------------
 
 Null hypothesis -&gt; No Relationship
+
 Alt. hypothesis -&gt; Relationship
 
 Looking at relationships between variables to understandand and predict what is going on.
@@ -389,6 +394,7 @@ Looking at relationships between variables to understandand and predict what is 
 | Nominal  | Nominal   |
 
 Ho:No relationship exists; probabilistic independence
+
 Ha: Relationship exists; probabilistic dependence
 
 Ex. Transit Railroads is interested in the relationship between travel distance and the ticket class purchased.
@@ -448,6 +454,7 @@ Oneway ANOVA is a test of relationship between a intervel level response variabl
 4.  Standard deviation is same for all the groups (Evaluate with Leven's test)
 
 Ho:No relationship exists; Distribution is idental across all categories
+
 Ha: Relationship exists; Difference in means across atlease two categories
 
 ``` r
@@ -498,6 +505,7 @@ Studentised range distribution is used to test each pairwise difference
 4.  Standard deviation is same for all the groups (Evaluate with Leven's test)
 
 Ho:No relationship exists: μi = μj for each i, j being checked
+
 Ha: Relationship exists: μi ≠ μj
 
 ``` r
@@ -527,6 +535,7 @@ Whenever we wish to determine if variances are all equal or not across different
 2.  Stability in DGP
 
 Ho: σ1 = σ2 = … = σk ; k independent samples/sets of responses
+
 Ha: At least one pair is not equal
 
 ``` r
@@ -587,6 +596,7 @@ abline(linefit,lty=2, col="blue")
 #### Model as a whole doing something or not
 
 Ho:No relationship exists; β1 = β2 =…=βk = 0
+
 Ha: Relationship exists; at least one predictor βi ≠ 0
 
 ANOVA is used to test this
@@ -607,6 +617,7 @@ anova(linefit)
 #### Testing Individual Predictors
 
 Ho:No relationship exists; βi = 0, 1 ≤ i ≤ k
+
 Ha: Relationship exists; βi ≠ 0
 
 For each predictor two tailed T - test is used to test this
