@@ -176,9 +176,22 @@ Hypothesis Testing
 -   α is the probability of the study rejecting the null hypothesis, given that it were true
 -   In statistical hypothesis testing, a result has statistical significance when p &lt; α
 
-**Type 2** \* Failure to reject H0 when its actually false \* Hence, you end up not accepting Ha when infact its true \* Type II error is to falsely infer the absence of something that is present \[going against the common belief with false information\] \* False negative finding \* It is failing to assert what is present, a miss \* The probability of marking Type II error is called β and and related to the power of a test (which equals 1−β). \* β is the probability of incorrectly concluding no statistical significance
+**Type 2**
 
-**Example:** \* H0 of a fire alarm, is that there is no fire \* Ha of a fire alarm, is that there is a fire \* Type I -&gt; Fire alarm going on indicating a fire when in fact there is no fire \* Type II -&gt; A fire breaking out and the fire alarm does not ring;
+-   Failure to reject H0 when its actually false
+-   Hence, you end up not accepting Ha when infact its true
+-   Type II error is to falsely infer the absence of something that is present \[going against the common belief with false information\]
+-   False negative finding
+-   It is failing to assert what is present, a miss
+-   The probability of marking Type II error is called β and and related to the power of a test (which equals 1−β).
+-   β is the probability of incorrectly concluding no statistical significance
+
+**Example:**
+
+-   H0 of a fire alarm, is that there is no fire
+-   Ha of a fire alarm, is that there is a fire
+-   Type I -&gt; Fire alarm going on indicating a fire when in fact there is no fire
+-   Type II -&gt; A fire breaking out and the fire alarm does not ring;
 
 Accepting alternative hypothesis when null hypothesis is true -&gt; Type 2
 
@@ -285,7 +298,7 @@ shapiro.test(seq)
     ##  Shapiro-Wilk normality test
     ## 
     ## data:  seq
-    ## W = 0.97832, p-value = 0.4833
+    ## W = 0.9424, p-value = 0.01679
 
 P-value being so high, we can conclude that: We fail to reject null hypothesis.
 Hence, our assumption of distribution being normal is not rejected.
