@@ -7,7 +7,7 @@ library(readxl)
 library(ggplot2)
 ```
 
-Estimation - Week 3
+Estimation
 -------------------
 
 ### Confidence Interval for true mean
