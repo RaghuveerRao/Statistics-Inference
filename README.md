@@ -21,7 +21,7 @@ Estimation
 
 1.  Random Sampling from DGP
 2.  Stability in DGP
-3.  If n&lt; 30 =&gt; Normal Distribution
+3.  If n&lt; 30 =&gt; Then assume normal distribution
 
 ``` r
 Congress <- read_excel("Piracy.xlsx", col_names = TRUE)
@@ -165,11 +165,22 @@ Hypothesis Testing
 
 ### Errors
 
-Accepting null hypothesis when alternative hypothesis is true -&gt; Type 1
+**Type 1**
+
+-   Incorrectly rejecting H0 when its actually true
+-   Hence, you end up accpeting Ha when infact its not true
+-   Type I error is to falsely infer the existence of something that is not there \[conforming to common belief with false information\]
+-   False positive finding
+-   It is asserting something that is absent, a false hit
+-   The probability of marking Type I error is called α or Significan level
+-   α is the probability of the study rejecting the null hypothesis, given that it were true
+-   In statistical hypothesis testing, a result has statistical significance when p &lt; α
+
+**Type 2** \* Failure to reject H0 when its actually false \* Hence, you end up not accepting Ha when infact its true \* Type II error is to falsely infer the absence of something that is present \[going against the common belief with false information\] \* False negative finding \* It is failing to assert what is present, a miss \* The probability of marking Type II error is called β and and related to the power of a test (which equals 1−β). \* β is the probability of incorrectly concluding no statistical significance
+
+**Example:** \* H0 of a fire alarm, is that there is no fire \* Ha of a fire alarm, is that there is a fire \* Type I -&gt; Fire alarm going on indicating a fire when in fact there is no fire \* Type II -&gt; A fire breaking out and the fire alarm does not ring;
 
 Accepting alternative hypothesis when null hypothesis is true -&gt; Type 2
-
-The probability of marking Type 1 error is Alpha (accepting Ha)
 
 The probability of marking Type 2 error is Beta (failure in rejecting Ho)
 
@@ -204,7 +215,7 @@ pt(t, df)
 
 1.  Random Sampling from DGP
 2.  Stability in DGP
-3.  If n&lt; 30 =&gt; Normal Distribution
+3.  If n&lt; 30 =&gt; Then assume normal distribution
 4.  Null hypothesis is true
 
 Test if the waiting time is less than 5 min
@@ -274,7 +285,7 @@ shapiro.test(seq)
     ##  Shapiro-Wilk normality test
     ## 
     ## data:  seq
-    ## W = 0.96431, p-value = 0.1347
+    ## W = 0.97832, p-value = 0.4833
 
 P-value being so high, we can conclude that: We fail to reject null hypothesis.
 Hence, our assumption of distribution being normal is not rejected.
@@ -455,7 +466,7 @@ Oneway ANOVA is a test of relationship between a interval level response variabl
 
 1.  Random Sampling from DGP
 2.  Stability in DGP
-3.  For each level of predictor variable, in n &lt; 30 then normally distributed
+3.  For each level of predictor variable, if n &lt; 30 then we assume normal distrubtion
 4.  Standard deviation is same for all the groups (Evaluate with Leven's test)
 
 Ho:No relationship exists; Distribution is identical across all categories
@@ -506,7 +517,7 @@ Studentised range distribution is used to test each pairwise difference
 
 1.  Random Sampling from DGP
 2.  Stability in DGP
-3.  For each level of predictor variable, in n &lt; 30 then normally distributed
+3.  For each level of predictor variable, in n &lt; 30 then we assume normal distribution
 4.  Standard deviation is same for all the groups (Evaluate with Leven's test)
 
 Ho:No relationship exists: μi = μj for each i, j being checked
