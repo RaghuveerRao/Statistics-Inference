@@ -7,7 +7,7 @@ library(readxl)
 library(ggplot2)
 ```
 
-Estimation
+Estimation - Week 3
 -------------------
 
 ### Confidence Interval for true mean
@@ -98,7 +98,9 @@ binom.test(358, (358+407), 0.5, conf.level = .9)
 
 ### Calculating CI directly from sample
 
-The file WaitTime.xlsx contains data of wait times (in minutes) for a random sample of a bank’s customers. Find a 90% confidence interval for the mean wait time at the bank. t.test - Performs one and two sample t-tests on vectors of data and also give CI. There are two kinds of hypotheses for a one sample t-test, the null hypothesis and the alternative hypothesis. The alternative hypothesis assumes that some difference exists between the true mean (μ) and the comparison value (m0), whereas the null hypothesis assumes that no difference exists. The comparision value (m0) can be specified with mu parameter below, default is 0. The value of mu does not affect the CI, as CI is the estimation of true mean using leveraging the given sample.
+The file WaitTime.xlsx contains data of wait times (in minutes) for a random sample of a bank’s customers. Find a 90% confidence interval for the mean wait time at the bank.
+
+**t.test** - Performs one and two sample t-tests on vectors of data and also give CI. There are two kinds of hypotheses for a one sample t-test, the null hypothesis and the alternative hypothesis. The alternative hypothesis assumes that some difference exists between the true mean (μ) and the comparison value (m0), whereas the null hypothesis assumes that no difference exists. The comparision value (m0) can be specified with mu parameter below, default is 0. The value of mu does not affect the CI, as CI is the estimation of true mean using leveraging the given sample.
 
 ``` r
 waiting = read_excel('WaitTime.xlsx')
@@ -151,7 +153,7 @@ sample_mean-qt(0.05, length(waiting$WaitTime-1))*sampled_sd
 
     ## [1] 5.870984
 
-***Interpretation: ** Ther's a 90% chance that the interval we got captures the true mean wiating time*
+**Interpretation**: Ther's a 90% chance that the interval we got captures the true mean wiating time\*
 
 Hypothesis Testing
 ------------------
@@ -159,6 +161,7 @@ Hypothesis Testing
 ### Errors
 
 Accepting null hypothesis when alternative hypothesis is true -&gt; Type 1
+
 Accepting alternative hypothesis when null hypothesis is ture -&gt; Type 2
 
 The probability of makring Type 1 error is Alpha (accepting Ha)
@@ -264,7 +267,7 @@ shapiro.test(seq)
     ##  Shapiro-Wilk normality test
     ## 
     ## data:  seq
-    ## W = 0.98303, p-value = 0.6845
+    ## W = 0.95509, p-value = 0.05543
 
 P-value being so high, we can conclude that: We fail to reject null hypothesis.
 Hence, our assumption of distribution being normal is not rejected.
