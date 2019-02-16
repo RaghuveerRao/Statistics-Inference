@@ -161,11 +161,9 @@ Hypothesis Testing
 ### Errors
 
 Accepting null hypothesis when alternative hypothesis is true -&gt; Type 1
-
 Accepting alternative hypothesis when null hypothesis is ture -&gt; Type 2
 
 The probability of makring Type 1 error is Alpha (accepting Ha)
-
 The probability of makring Type 2 error is Beta (accepting Ho)
 
 The closer is true mean to the hopothetical mean, the higher the value of Beta. We can only control Type 1 error through desired level of significance. Hence, design hypothesis such that the error we want to control is the Type 1 error. \*\* Statisticians Dodge: \*\* Since we cannot control Type 2 error. (ie. Accepting Ho when Ha is ture). Never draw the conclusion of accepting Ho, istead what we can conclude is that: 'we do not reject Ho) ie: Failed to reject the Null Hypothesis P value is the probablity of getting the sample result if Ho were true
