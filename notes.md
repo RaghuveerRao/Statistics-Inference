@@ -267,7 +267,7 @@ shapiro.test(seq)
     ##  Shapiro-Wilk normality test
     ## 
     ## data:  seq
-    ## W = 0.95509, p-value = 0.05543
+    ## W = 0.97474, p-value = 0.3566
 
 P-value being so high, we can conclude that: We fail to reject null hypothesis.
 Hence, our assumption of distribution being normal is not rejected.
