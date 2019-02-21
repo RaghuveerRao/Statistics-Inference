@@ -172,7 +172,7 @@ Hypothesis Testing
 -   Type I error is to falsely infer the existence of something that is not there \[conforming to common belief with false information\]
 -   False positive finding
 -   It is asserting something that is absent, a false hit
--   The probability of marking Type I error is called α or Significan level
+-   The probability of marking Type I error is called α or Significance-&gt; level
 -   α is the probability of the study rejecting the null hypothesis, given that it were true
 -   In statistical hypothesis testing, a result has statistical significance when p &lt; α
 
@@ -185,6 +185,8 @@ Hypothesis Testing
 -   It is failing to assert what is present, a miss
 -   The probability of marking Type II error is called β and and related to the power of a test (which equals 1−β).
 -   β is the probability of incorrectly concluding no statistical significance
+-   Statistical power is the likelihood that a study will detect an effect when there is an effect there to be detected.
+-   Statistical power is the probability that it will reject a false null hypothesis
 
 **Example:**
 
@@ -193,11 +195,9 @@ Hypothesis Testing
 -   Type I -&gt; Fire alarm going on indicating a fire when in fact there is no fire
 -   Type II -&gt; A fire breaking out and the fire alarm does not ring;
 
-Accepting alternative hypothesis when null hypothesis is true -&gt; Type 2
+The closer is true mean to the hypothetical mean, the higher the value of Beta. We can only control Type 1 error through desired level of significance. Hence, design hypothesis such that the error we want to control is the Type 1 error.
 
-The probability of marking Type 2 error is Beta (failure in rejecting Ho)
-
-The closer is true mean to the hypothetical mean, the higher the value of Beta. We can only control Type 1 error through desired level of significance. Hence, design hypothesis such that the error we want to control is the Type 1 error. \*\* Statisticians Dodge: \*\* Since we cannot control Type 2 error. (ie. Accepting Ho when Ha is true). Never draw the conclusion of accepting Ho, instead what we can conclude is that: 'we do not reject Ho) ie: Failed to reject the Null Hypothesis P value is the probability of getting the sample result if Ho were true
+**Statisticians Dodge:** Since we cannot control Type 2 error. (ie. Accepting Ho when Ha is true). Never draw the conclusion of accepting Ho, instead what we can conclude is that: 'we do not reject Ho) ie: Failed to reject the Null Hypothesis P value is the probability of getting the sample result if Ho were true
 
 ### T - Test
 
@@ -232,7 +232,9 @@ pt(t, df)
 4.  Null hypothesis is true
 
 Test if the waiting time is less than 5 min
+
 Null hypothesis -&gt; true mean is greater then and equal to 5
+
 Alt. hypothesis -&gt; true mean is less than 5
 
 ``` r
@@ -251,9 +253,9 @@ t.test(waiting$WaitTime, alternative = 'less', mu=5)
     ## mean of x 
     ##      5.46
 
-The likely hood of getting sample statistic as extreme as 1.85 in 0.966 if the true mean waiting time is greater then or equal to 5
+The likely hood of getting sample statistic as extreme as 1.85 is 0.966 if the true mean waiting time is greater then or equal to 5
 
-The **significance level** is the probability of obtaining a result as extreme as, or more extreme than, the result actually obtained when the null hypothesis is true
+The **P Value** is the probability of obtaining a result as extreme as, or more extreme than, the result actually obtained when the null hypothesis is true
 
 The significance level and confidence level are the complementary portions in the normal distribution.
 
@@ -298,7 +300,7 @@ shapiro.test(seq)
     ##  Shapiro-Wilk normality test
     ## 
     ## data:  seq
-    ## W = 0.9424, p-value = 0.01679
+    ## W = 0.96493, p-value = 0.1429
 
 P-value being so high, we can conclude that: We fail to reject null hypothesis.
 Hence, our assumption of distribution being normal is not rejected.
