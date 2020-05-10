@@ -16,11 +16,10 @@ Notes on statistical inference made for learning statistics for data scientists
 Sampling Distribution
 ----------
 ### Central Limit Theorem
-When sampling is done from a population with mean  and finite standard
-deviation , the sampling distribution of the sample mean will tend to a
-normal distribution with mean  and standard deviation as the
+When sampling is done from a population with mean u and finite standard
+deviation, the sampling distribution of the sample mean will tend to a
+normal distribution with mean u and standard deviation sd/sqrt(n) as the
 sample size n becomes large.
-For “large enough” n X ' N(, 2>n)
 
 Estimation
 ----------
