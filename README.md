@@ -12,6 +12,11 @@ Statistical Inference
 
 Notes on statistical inference made for learning statistics for data scientists
 
+
+Sampling Distribution
+----------
+
+
 Estimation
 ----------
 
