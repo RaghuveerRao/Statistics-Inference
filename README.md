@@ -55,6 +55,10 @@ higher
 
 ### Confidence Interval estimation for proportion
 
+When sampling is from the same population, using a fixed sample size. The higher the confidence level, wider the confidence band gets. Theoratically at 100% confidence, the band will be infinite wide as that's the only way to be 100% confidenct about the population paramter. 
+
+The only way to make confidence interval band narrow is by increasing sample size. ie: get more data!
+
 **Assumptions:**
 
 1.  Random Sampling from DGP
