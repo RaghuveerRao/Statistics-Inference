@@ -10,7 +10,7 @@ library(ggplot2)
 Statistical Inference
 ---------------------
 
-Notes on statistical inference made for learning statistics for data scientists
+Notes on statistical inference made for hadny reference
 
 
 Sampling Distribution
