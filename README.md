@@ -188,6 +188,7 @@ Hypothesis Testing
 -   The probability of marking Type I error is called α or Significance-&gt; level
 -   α is the probability of the study rejecting the null hypothesis, given that it were true
 -   In statistical hypothesis testing, a result has statistical significance when p &lt; α
+-   When you have a lower threshold for significance, your probability of concluding there’s an effect when it’s not really there is lower
 
 **Type 2**
 
